@@ -57,5 +57,12 @@ public class LoginPage extends PortalPage {
         return driver.getCookie(cookieName);
     }
 
+    public RegisterPage clickOnRegisterButton() throws InterruptedException{
+        driver.findElement("id=register").click();
+        driver.waitForLoad();
+        Thread.sleep(2000);
+        return new RegisterPage(driver);
+    }
+
 
 }
